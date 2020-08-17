@@ -3,9 +3,9 @@ using NUnit.Framework;
 namespace WebAddressbookTests
 {
     [TestFixture]
-    class GroupCreationTests : TestBase
+    class GroupCreationTests : AuthTestBase
     {
-        [Test]
+        [Test,Order(1)]
         public void GroupCreationTest()
         {
             GroupData group = new GroupData("newgroup")
@@ -18,7 +18,7 @@ namespace WebAddressbookTests
                 .Create(group);
         }
 
-        [Test]
+        [Test,Order(2)]
         public void EmptyGroupCreationTest()
         {
             GroupData group = new GroupData("")

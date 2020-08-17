@@ -4,12 +4,13 @@ using System.Runtime.InteropServices.ComTypes;
 namespace WebAddressbookTests
 {
     [TestFixture]
-    class GroupRemovalTests : TestBase
+    class GroupRemovalTests : AuthTestBase
     {
-        [Test]
+        [Test,Order(4)]
         public void GroupRemovalTest()
         {
-            app.Groups.Remove(1);
+            app.Groups
+                .Remove(1);
         }
     }
 }

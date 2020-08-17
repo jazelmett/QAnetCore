@@ -6,9 +6,9 @@ using System.Text;
 namespace WebAddressbookTests
 {
     [TestFixture]
-    class GroupModificationTests : TestBase
+    class GroupModificationTests : AuthTestBase
     {
-        [Test]
+        [Test,Order(3)]
         public void GroupModificationTest()
         {
             GroupData newData = new GroupData("zzz")
@@ -17,7 +17,8 @@ namespace WebAddressbookTests
                 Footer = null
             };
 
-            app.Groups.Modify(1, newData);
+            app.Groups
+                .Modify(1, newData);
         }
     }
 }

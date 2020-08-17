@@ -1,29 +1,18 @@
-﻿using System;
-using System.Text;
-using NUnit.Framework;
-using NUnit.Framework.Constraints;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
+﻿using NUnit.Framework;
+using OpenQA.Selenium.Remote;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace WebAddressbookTests
 {
-    class TestBase
+    public class TestBase
     {
         protected ApplicationManager app;
 
         [SetUp]
-        public void SetupTest()
+        public void SetupApplicationManager()
         {
-            app = new ApplicationManager();
-            app.Navigator.GoToHomePage();
-            app.Auth.Login(new AccountData("admin", "secret"));
-        }
-
-        [TearDown]
-        public void TeardownTest()
-        {
-            app.Stop();
+            app = ApplicationManager.GetInstance();
         }
     }
+
 }
