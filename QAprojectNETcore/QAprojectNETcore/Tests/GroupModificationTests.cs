@@ -6,8 +6,9 @@ using System.Text;
 namespace WebAddressbookTests
 {
     [TestFixture]
-    class GroupModificationTests : AuthTestBase
+    class GroupModificationTests : TestBase
     {
+
         [Test,Order(3)]
         public void GroupModificationTest()
         {

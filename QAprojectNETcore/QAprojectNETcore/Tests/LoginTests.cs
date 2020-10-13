@@ -9,7 +9,7 @@ namespace WebAddressbookTests
     [TestFixture]
     public class LoginTests : TestBase
     {
-       [Test,Order(5)]
+        [Test]
         public void LoginWithValidCredentials()
         {
             app.Auth.Logout();
@@ -18,7 +18,7 @@ namespace WebAddressbookTests
             Assert.IsTrue(app.Auth.IsLoggedIn(account));
         }
 
-        [Test,Order(6)]
+        [Test]
         public void LoginWithInValidCredentials()
         {
             app.Auth.Logout();
@@ -26,6 +26,5 @@ namespace WebAddressbookTests
             app.Auth.Login(account);
             Assert.IsTrue(!app.Auth.IsLoggedIn(account));
         }
-        
     }
 }

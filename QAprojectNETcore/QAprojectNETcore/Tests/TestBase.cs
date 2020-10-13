@@ -4,6 +4,7 @@ using System.Runtime.InteropServices.ComTypes;
 
 namespace WebAddressbookTests
 {
+  
     public class TestBase
     {
         protected ApplicationManager app;
@@ -11,8 +12,11 @@ namespace WebAddressbookTests
         [SetUp]
         public void SetupApplicationManager()
         {
-            app = ApplicationManager.GetInstance();
+            app = new SetupFixture.app;
         }
+
     }
+
+    
 
 }

@@ -3,8 +3,9 @@ using NUnit.Framework;
 namespace WebAddressbookTests
 {
     [TestFixture]
-    class GroupCreationTests : AuthTestBase
+    class GroupCreationTests : TestBase
     {
+
         [Test,Order(1)]
         public void GroupCreationTest()
         {

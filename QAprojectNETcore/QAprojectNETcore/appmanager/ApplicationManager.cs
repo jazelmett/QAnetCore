@@ -47,10 +47,6 @@ namespace WebAddressbookTests
             return app.Value;
         }
 
-        ~ApplicationManager()
-        {
-            Driver.Quit();
-        }
 
         public IWebDriver Driver { get { return driver; } }
         public LoginHelper Auth { get { return loginHelper; } }
